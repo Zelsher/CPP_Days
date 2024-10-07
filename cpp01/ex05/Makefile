@@ -1,7 +1,7 @@
-NAME			= sed_for_losers
+NAME			= Harl
 
-INC_DIR			=
-SRC_DIR			=
+INC_DIR			= inc/
+SRC_DIR			= src/
 OBJ_DIR			= obj/
 
 CC				= c++
@@ -9,6 +9,7 @@ CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I $(INC)
 RM				= rm -f
 
 SRC				=	$(SRC_DIR)main.cpp \
+					$(SRC_DIR)Harl.cpp \
 
 
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))

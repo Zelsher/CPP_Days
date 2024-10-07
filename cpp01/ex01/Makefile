@@ -1,4 +1,4 @@
-NAME			= Moar brainz!
+NAME			= Moar
 
 INC_DIR			= inc/
 SRC_DIR			= src/

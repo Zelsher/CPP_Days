@@ -1,39 +1,42 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 
-void	Remplace_string(std::string &content, std::string s1, std::string s2)
+int main(int ac, char **av)
 {
-	size_t	pos = 0;
+    if (ac != 4)
+    {
+        std::cerr << "number of parameters invalid" << std::endl;
+        return (1);
+    }
+    std::ifstream inputFile(av[1]);
 
-	while ((pos = content.find(s1, pos)) != std::string::npos)
-	{
-		content.replace(pos, s1.length(), s2);
-		pos += s2.length();
-	}
-}
+    if (!inputFile.is_open()) {
+        std::cerr << "Error opening file." << std::endl;
+        return 1;
+    }
+    std::string str = (std::string)av[1] + ".replace";
 
-int	main(int ac, char **av)
-{
-	if (ac != 4)
-	{
-		std::cerr << "Wrong number of arguments" << std::endl;
-		return (1);
-	}
-	std::string	buffer;
-	std::string	file_name(av[1]);
+    std::ofstream   outputFile(str.c_str());
+    if (!outputFile.is_open())
+    {
+        std::cerr << "Error create output file." << std::endl;
+        inputFile.close();
+        return (1);
+    }
 
-	file_name.append(".replace");
-	if (ac != 4)
-		return (1);
-
-	std::ifstream	read_file(av[1]);
-	std::ofstream	write_file(file_name);
-	if (!read_file.is_open() || !write_file.is_open())
-	{
-		std::cerr << "File issue" << std::endl;
-		return (1);
-	}
-	std::string		content((std::istreambuf_iterator<char>(read_file) ), (std::istreambuf_iterator<char>()));
-	Remplace_string(content, av[2], av[3]);
+    std::string s1 = av[2];
+    std::string s2 = av[3];
+    std::string line;
+    while (std::getline(inputFile, line)) {
+        size_t n = 0;
+        while ((n = line.find(s1, n)) != std::string::npos) {
+            line.erase(n, s1.length());
+            line.insert(n, s2);
+            n += s2.length();
+        }
+        outputFile << line << std::endl;
+    }
+    outputFile.close();
+    inputFile.close();
+    return 0;
 }

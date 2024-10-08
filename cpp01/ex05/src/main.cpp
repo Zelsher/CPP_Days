@@ -8,5 +8,6 @@ int main()
     Harl_robot.complain("INFO");
     Harl_robot.complain("WARNING");
     Harl_robot.complain("ERROR");
+    Harl_robot.complain("invalid");
     return (0);
 }

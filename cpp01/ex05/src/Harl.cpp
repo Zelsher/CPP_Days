@@ -2,8 +2,15 @@
 
 int GET_Level(std::string level)
 {
+	const std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int					levelNumber = 4;
 
-    return (0);
+	for (int i = 0; i < 4 && levelNumber == 4; i++)
+	{
+		if (level == levels[i])
+			levelNumber = i;
+	}
+	return (levelNumber);
 }
 
 Harl::Harl()
@@ -38,8 +45,8 @@ void    Harl::error()
 
 void    Harl::complain(std::string level)
 {
-    void (Harl::*complaining[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-    int                 LVL;
+    void    (Harl::*complaining[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    int     LVL;
 
     LVL = GET_Level(level);
     if (LVL < 4)
@@ -47,5 +54,3 @@ void    Harl::complain(std::string level)
     else
         std::cerr << "Invalid level" << std::endl;
 }
-
-//std::cout << "" << std::endl;

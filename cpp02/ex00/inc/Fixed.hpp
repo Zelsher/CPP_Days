@@ -2,24 +2,22 @@
 # define FIXED_HPP
 
 #include <iostream>
-#include <string>
-
-using namespace std;
 
 class Fixed
 {
-	private:
-		int					value;
-		static const int	fractional_bits = 8;
-	public:
-		Fixed();
-		Fixed(const Fixed &fixed);
-		Fixed(const int value);
-		Fixed(const float value);
-		~Fixed();
+    private : 
+        int n;
+        const int static nb_bits = 8;
 
-		int		getRawBits(void) const { return value; };
-		void	setRawBits(const int raw) { value = raw; };
+    public :
+        Fixed(void);
+        Fixed( const Fixed &fixed);
+        Fixed& operator=( const Fixed &fixed );
+        ~Fixed();
+
+        int     getRawBits( void ) const;
+        void    setRawBits( int const raw );
+
 };
 
 #endif

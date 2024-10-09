@@ -1,4 +1,4 @@
-NAME			= a
+NAME			= ClapTrap
 
 INC				= inc/
 SRC_DIR			= src/
@@ -9,7 +9,7 @@ CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I $(INC)
 RM				= rm -f
 
 SRC				=	$(SRC_DIR)main.cpp \
-					$(SRC_DIR)Fixed.cpp \
+					$(SRC_DIR)ClapTrap.cpp \
 
 
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))

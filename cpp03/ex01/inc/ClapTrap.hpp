@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-class ClapTrap
+class ClapTrap 
 {
 	private :
 		std::string			_name;

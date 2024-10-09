@@ -1,8 +1,8 @@
-NAME			= canonical
+NAME			= Fixed
 
-INC				= inc/
+INC_DIR			= inc/
 SRC_DIR			= src/
-OBJ_DIR			= obj/
+OBJ_DIR			=
 
 CC				= c++
 CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I $(INC)
@@ -23,7 +23,7 @@ $(NAME): 		$(OBJ) $(INC)
 				@$(CC) -o $(NAME) $(OBJ)
 				@echo $(G)Compiling [$(NAME)]$(X) 
 
-$(OBJ_DIR)%.o:	$(SRC_DIR)%.c
+$(OBJ_DIR)%.o:	$(SRC_DIR)%.cpp $(INC_DIR)*.hpp Makefile
 				@mkdir -p $(@D)
 				@$(CC) $(CFLAGS) -c $< -o $@
 

@@ -3,7 +3,7 @@
 
 int main()
 {
-    ScavTrap essaie("essaie");
+    ScavTrap    essaie("yrdy");
     std::cout << std::endl;
 
     essaie.attack("un autre mec");
@@ -12,9 +12,9 @@ int main()
     essaie.takeDamage(4);
     std::cout << std::endl;
 
-    essaie.beRepaired();
+    essaie.beRepaired(2);
 
-    essaie.attack("quelquun");
+    essaie.attack("someone");
 
     essaie.guardGate();
 }

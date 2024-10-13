@@ -1,4 +1,4 @@
-NAME			= ClapTrap
+NAME			= ScavTrap
 
 INC				= inc/
 SRC_DIR			= src/

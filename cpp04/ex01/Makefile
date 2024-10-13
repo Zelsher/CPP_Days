@@ -1,4 +1,4 @@
-NAME			= FragTrap
+NAME			= ClapTrap
 
 INC				= inc/
 SRC_DIR			= src/
@@ -10,8 +10,6 @@ RM				= rm -f
 
 SRC				=	$(SRC_DIR)main.cpp \
 					$(SRC_DIR)ClapTrap.cpp \
-					$(SRC_DIR)FragTrap.cpp \
-					$(SRC_DIR)ScavfffTrap.cpp \
 
 
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))

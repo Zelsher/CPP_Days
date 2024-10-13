@@ -1,4 +1,4 @@
-NAME			= FragTrap
+NAME			= Polymorph
 
 INC				= inc/
 SRC_DIR			= src/
@@ -9,9 +9,9 @@ CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I $(INC)
 RM				= rm -f
 
 SRC				=	$(SRC_DIR)main.cpp \
-					$(SRC_DIR)ClapTrap.cpp \
-					$(SRC_DIR)FragTrap.cpp \
-					$(SRC_DIR)ScavfffTrap.cpp \
+					$(SRC_DIR)Animal.cpp \
+					$(SRC_DIR)Dog.cpp \
+					$(SRC_DIR)Cat.cpp \
 
 
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))

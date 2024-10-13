@@ -7,18 +7,18 @@ Animal::Animal()
 
 Animal::Animal(const Animal &animal)
 {
-    std::cout << "Copy constructor called on " << std::endl;
+    std::cout << "Copy constructor called on Animal " << type  << std::endl;
 }
 
 Animal& Animal::operator=(const Animal &claptrap)
 {
-    std::cout << "Affectation called on "  << std::endl;
+    std::cout << "Affectation called on Animal " << type  << std::endl;
     return *this;
 }
 
 Animal::~Animal()
 {
-    std::cout << "Destructor called on " << type << std::endl;
+    std::cout << "Destructor called on Animal " << type << std::endl;
 }
 
 std::string Animal::getType() const

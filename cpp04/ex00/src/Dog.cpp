@@ -23,3 +23,8 @@ Dog::~Dog()
 	std::cout << "Destructor called on Dog " << std::endl;
 }
 
+void    Dog::makeSound(void) const
+{
+    std::cout << "Dog sound" << std::endl;
+}
+

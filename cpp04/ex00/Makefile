@@ -1,4 +1,4 @@
-NAME			= Polymorph
+NAME			= polymorph
 
 INC				= inc/
 SRC_DIR			= src/

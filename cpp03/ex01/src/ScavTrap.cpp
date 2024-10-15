@@ -8,6 +8,25 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->_attack_dmg = 20;
 }
 
+ScavTrap::ScavTrap(const ScavTrap &scavTrap) : ClapTrap(scavTrap._name)
+{
+    std::cout << "ScavTrap Copy constructor called on " << _name << std::endl;
+    this->_name = scavTrap._name;
+    this->_hit_point = scavTrap._hit_point;
+    this->_energy_point = scavTrap._energy_point;
+    this->_attack_dmg = scavTrap._attack_dmg;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap &scavTrap)
+{
+    std::cout << "ScavTrap Affectation called on " << _name << std::endl;
+    this->_name = scavTrap._name;
+    this->_hit_point = scavTrap._hit_point;
+    this->_energy_point = scavTrap._energy_point;
+    this->_attack_dmg = scavTrap._attack_dmg;
+    return *this;
+}
+
 
 ScavTrap::~ScavTrap()
 {
@@ -19,7 +38,7 @@ void	ScavTrap::attack(std::string const& target)
 {
     if (!_hit_point || !_energy_point)
         return;
-    std::cout << "ATTACK of " << _name << std::endl;
+    std::cout << "Scavtrap " << _name << " ATTACK " << target << " causing " << _attack_dmg << std::endl;
 }
 
 void	ScavTrap::guardGate()

@@ -4,18 +4,24 @@
 
 int main()
 {
-    ScavTrap    essaie("yrdy");
+    FragTrap    essaie("essaie");
+    FragTrap    test("test");
+
+    test = essaie;
     std::cout << std::endl;
 
-    essaie.attack("un autre mec");
+    test.attack("un autre mec");
     std::cout << std::endl;
 
-    essaie.takeDamage(4);
+    test.takeDamage(4);
     std::cout << std::endl;
 
-    essaie.beRepaired(2);
+    test.beRepaired(2);
+    std::cout << std::endl;
 
-    essaie.attack("someone");
+    test.attack("someone");
+    std::cout << std::endl;
 
-    essaie.guardGate();
+    test.hightFivesGuys();
+    std::cout << std::endl;
 }

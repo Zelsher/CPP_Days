@@ -2,7 +2,7 @@
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hit_point(10), _energy_point(10), _attack_dmg(0)
 {
-    std::cout << "Constructor called on " << _name << std::endl;
+    std::cout << "ClapTrap Constructor called on " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &claptrap)
@@ -11,7 +11,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
     this->_hit_point = claptrap._hit_point;
     this->_energy_point = claptrap._energy_point;
     this->_attack_dmg = claptrap._attack_dmg;
-    std::cout << "Copy constructor called on " << _name << std::endl;
+    std::cout << "ClapTrap Copy constructor called on " << _name << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &claptrap)
@@ -20,19 +20,19 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &claptrap)
     this->_hit_point = claptrap._hit_point;
     this->_energy_point = claptrap._energy_point;
     this->_attack_dmg = claptrap._attack_dmg;
-    std::cout << "Affectation called on " << _name << std::endl;
+    std::cout << "ClapTrap Affectation called on " << _name << std::endl;
     return *this;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called on " << _name << std::endl;
+    std::cout << "ClapTrap Destructor called on " << _name << std::endl;
 }
 
 
 void	ClapTrap::attack(const std::string &target)
 {
-    std::cout << "attack called by " << _name << " on " << target << " causing " << _attack_dmg << " damage" << std::endl;
+    std::cout << "ClapTrap attack called by " << _name << " on " << target << " causing " << _attack_dmg << " damage" << std::endl;
     if (!_hit_point || !_energy_point)
         return;
     //attack

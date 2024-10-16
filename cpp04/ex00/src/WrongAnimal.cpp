@@ -1,4 +1,4 @@
-#include "WrongAnimal.hpp"
+#include "../inc/WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void) : type("Wrong Animal")
 {
@@ -23,7 +23,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &animal)
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal &animal)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Wrong Animal copy assignment operator called" << std::endl;
     if (this != &animal)
         this->type = animal.type;
     return (*this);

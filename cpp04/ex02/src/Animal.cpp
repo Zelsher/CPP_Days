@@ -10,7 +10,7 @@ Animal::Animal(const Animal &animal)
     std::cout << "Copy constructor called on Animal " << type  << std::endl;
 }
 
-Animal& Animal::operator=(const Animal &claptrap)
+Animal& Animal::operator=(const Animal &animal)
 {
     std::cout << "Affectation called on Animal " << type  << std::endl;
     return *this;
@@ -18,7 +18,7 @@ Animal& Animal::operator=(const Animal &claptrap)
 
 Animal::~Animal()
 {
-    std::cout << "Destructor called on Animal " << type << std::endl;
+    std::cout << "Destructor called on Animal "  << std::endl;
 }
 
 std::string Animal::getType() const
@@ -33,5 +33,10 @@ void Animal::setType(std::string type)
 
 void Animal::makeSound() const
 {
-    std::cout << "Animal sound" << std::endl;
+    if (type == "Dog")
+        std::cout << "Dog sound" << std::endl;
+    else if (type == "Cat")
+        std::cout << "Cat sound" << std::endl;
+    else
+        std::cout << "Animal sound" << std::endl;
 }

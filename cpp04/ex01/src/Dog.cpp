@@ -15,7 +15,7 @@ Dog::Dog(const Dog &dog) : Animal(dog)
 
 Dog& Dog::operator=(const Dog &dog)
 {
-	_brain = dog._brain;
+	*_brain = *dog._brain;
 	std::cout << "Affectation called on Dog " << std::endl;
 	Animal::operator=(dog);
 	return *this;

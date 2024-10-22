@@ -1,4 +1,4 @@
-NAME			= brainer
+NAME			= brain
 
 INC				= inc/
 SRC_DIR			= src/
@@ -13,8 +13,8 @@ SRC				=	$(SRC_DIR)main.cpp \
 					$(SRC_DIR)Dog.cpp \
 					$(SRC_DIR)Cat.cpp \
 					$(SRC_DIR)Brain.cpp \
-					$(SRC_DIR)WrongCat.cpp \
 					$(SRC_DIR)WrongAnimal.cpp \
+					$(SRC_DIR)WrongCat.cpp \
 
 
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))

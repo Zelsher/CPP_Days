@@ -9,7 +9,6 @@ int main()
     Cat *test = new Cat();
     
     *i = *test;
-    i = test;
 
     std::cout << test->get_idea(0) << " | " << i->get_idea(0) << std::endl;
     test->set_idea(0, "test");

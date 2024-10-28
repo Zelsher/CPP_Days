@@ -40,5 +40,8 @@ int main()
     testanimal->makeSound();
     testcat->makeSound();
     std::cout << std::endl;
+
+    delete  testanimal;
+    delete  testcat;
     return 0;
 }

@@ -3,11 +3,11 @@
 AForm::AForm(std::string name, short int grade_to_sign, short int grade_to_exec) : _name(name), _grade_to_sign(grade_to_sign), _grade_to_exec(grade_to_exec)
 {
 	_signed = false;
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor called on Aform " << _name << std::endl;
 }
 AForm::~AForm()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor called on " << _name << std::endl;
 }
 AForm::AForm(const AForm&form) : _name(form.GET_Name()), _grade_to_sign(form.GET_Grade_To_Sign()), _grade_to_exec(form.GET_Grade_To_Exec()), _signed(form.IS_Signed())
 {
@@ -40,11 +40,11 @@ void	AForm::beSigned(Bureaucrat& bureaucrat)
 }
 
 
-void            AForm::ToExecute(Bureaucrat const & executor) const
+void	AForm::ToExecute(Bureaucrat const & executor) const
 {
 	if (executor.getGrade() < _grade_to_exec)
 		throw AForm::GradeTooLowException();
-	std::cout << "signed : " << _signed << std::endl;
+	//std::cout << "signed : " << _signed << std::endl;
 	if (!_signed)
 		throw AForm::FormNotSigned();
 }

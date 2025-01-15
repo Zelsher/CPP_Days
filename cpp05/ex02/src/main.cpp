@@ -16,10 +16,19 @@ int main()
     Bureaucrat  Melvin("Melvin", 14);
     Bureaucrat  Kevin("Kevin", 17);
     Bureaucrat  Calvin("Calvin", 27);
-
+    std::cout << std::endl;
     try
     {
-        Melvin.signForm(Test_presidential);
+        Test_presidential.beSigned(Melvin);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    std::cout << Test_presidential << std::endl;
+    try
+    {
+        Melvin.executeForm(Test_presidential);
     }
     catch(const std::exception& e)
     {

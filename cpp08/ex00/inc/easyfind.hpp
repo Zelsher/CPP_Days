@@ -1,10 +1,8 @@
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
-# include <algorithm>
 # include <iostream>
 # include <vector>
-# include <set>
 
 class ValueNotFound : public std::exception {
 	public:
@@ -14,7 +12,7 @@ class ValueNotFound : public std::exception {
 };
 
 template<typename T>
-int	easyfind(T const & array, int n) {
+int	easyfind(T const & array, int const n) {
     for (typename T::const_iterator i = array.begin(); i != array.end(); ++i)
     {
         if (*i == n)
@@ -22,5 +20,6 @@ int	easyfind(T const & array, int n) {
     }
     throw ValueNotFound();
 }
+
 
 #endif 

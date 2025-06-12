@@ -5,6 +5,11 @@
 #include <cstdlib>
 #include <cmath>
 
+struct Data
+{
+    std::string name;
+};
+
 class Serializer 
 {
     private:
@@ -13,7 +18,6 @@ class Serializer
         Serializer& operator=(const Serializer&); // Suppression de l'opérateur d'affectation
 
     public:
-        uintptr_t   serialize(Data *ptr);
-        Data        *deserialize(uintptr_t raw);
+        static uintptr_t    serialize(Data *ptr);
+        static Data         *deserialize(uintptr_t raw);
 };
-

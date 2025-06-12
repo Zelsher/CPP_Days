@@ -1,4 +1,4 @@
-NAME			= span
+NAME			= btc
 
 INC				= inc/
 SRC_DIR			= src/
@@ -9,7 +9,7 @@ CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I $(INC)
 RM				= rm -f
 
 SRC				=	$(SRC_DIR)main.cpp \
-					$(SRC_DIR)Span.cpp \
+					$(SRC_DIR)BitcoinExchange.cpp \
 
 
 

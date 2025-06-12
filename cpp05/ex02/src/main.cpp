@@ -34,6 +34,23 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+    try
+    {
+        Melvin.signForm(Test_presidential);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    std::cout << Test_presidential << std::endl;
+    try
+    {
+        Melvin.executeForm(Test_presidential);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
     
     //Melvin.signForm(Test_presidential);
     //Melvin.executeForm(Test_presidential);

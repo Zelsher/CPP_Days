@@ -1,49 +1,39 @@
 #include "../inc/easyfind.hpp"
+#include <deque>
 
-int main()
-{
-    std::vector<int> v = {1, 2, 3, 4};
-    
-    std::set<int> s;
-    s.insert(4);
+int main(){
 
-    //std::map<int, int> m;
-    //m[1] = 4;
+    std::deque<int> test;
+    test.push_back(1);
+    test.push_back(2);
+    test.push_back(3);
+    test.push_back(4);
+    test.push_back(5);
 
-    std::cout << easyfind(v, 4) << std::endl;
-    std::cout << easyfind(s, 4) << std::endl;
+    // Affichage pour vérifier
+    for (size_t i = 0; i < test.size(); ++i) {
+        std::cout << "[" << test[i] << "] ";
+    }
+    std::cout << std::endl;
 
-	try 
-    {
-		int n = easyfind(s, 4);
+	std::cout << std::endl << "start looking for 1" << std::endl;
+	try {
+		int n = easyfind(test, 1);
 		std::cout << "Value found : " << n  << std::endl;
 	}
 	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
-    try 
-    {
-		int n = easyfind(v, 4);
+
+
+	std::cout << std::endl << "start looking for 33" << std::endl;
+	try {
+		int n = easyfind(test, 33);
 		std::cout << "Value found : " << n  << std::endl;
 	}
 	catch(const std::exception& e) {
-		std::cerr << e.what() << '\n';
+		std::cerr << "Exception: " << e.what() << '\n';
 	}
 
-    try 
-    {
-		int n = easyfind(s, 5);
-		std::cout << "Value found : " << n  << std::endl;
-	}
-	catch(const std::exception& e) {
-		std::cerr << e.what() << '\n';
-	}
-    try 
-    {
-		int n = easyfind(v, 5);
-		std::cout << "Value found : " << n  << std::endl;
-	}
-	catch(const std::exception& e) {
-		std::cerr << e.what() << '\n';
-	}
+    return 0;
 }

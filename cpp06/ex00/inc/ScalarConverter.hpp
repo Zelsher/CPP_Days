@@ -7,9 +7,9 @@
 
 class ScalarConverter {
 private:
-    ScalarConverter();  // Constructeur privé pour empêcher l'instanciation
-    ScalarConverter(const ScalarConverter&); // Suppression du constructeur de copie
-    ScalarConverter& operator=(const ScalarConverter&); // Suppression de l'opérateur d'affectation
+    ScalarConverter();
+    ScalarConverter(const ScalarConverter&);
+    ScalarConverter& operator=(const ScalarConverter&);
 
 public:
     static void convert(const std::string& input);

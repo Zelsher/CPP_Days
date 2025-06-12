@@ -1,4 +1,4 @@
-NAME			= templater
+NAME			= easyfind
 
 INC				= inc/
 SRC_DIR			= src/
@@ -9,7 +9,6 @@ CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I $(INC)
 RM				= rm -f
 
 SRC				=	$(SRC_DIR)main.cpp \
-					$(SRC_DIR)easyfind.cpp \
 
 
 

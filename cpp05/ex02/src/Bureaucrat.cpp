@@ -40,7 +40,10 @@ void    Bureaucrat::signForm(AForm& form)
     if (form.GET_Grade_To_Sign() < _grade)
         std::cout << _name << " couldn't sign " << form.GET_Name() << " because grade is too low" << std::endl;
     else
+    {
+        form.beSigned(*this);
         std::cout << _name << " signed " << form.GET_Name() << std::endl;
+    }
 }
 
 void    Bureaucrat::executeForm(AForm const & form)

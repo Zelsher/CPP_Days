@@ -36,7 +36,6 @@ void	AForm::beSigned(Bureaucrat& bureaucrat)
         throw GradeTooLowException();
 	else
 		_signed = 1;
-	bureaucrat.signForm(*this);
 }
 
 
